@@ -7,6 +7,7 @@ import { getPlanData } from "@/lib/getPlanData";
 import ConfirmPayment from "./ConfirmPayment";
 import PaymentView from "./PaymentView";
 import { getBalance } from "@/lib/get-balance";
+import Portfolio from "./Portfolio";
 export default function App() {
   const [provider, setProvider] = useState({ name: "MTN", code: "01" });
   const [data, setData] = useState([]);
@@ -57,7 +58,8 @@ export default function App() {
   return (
     <div className="px-1 min-h-screen pb-8 w-screen flex flex-col items-center">
       {home && (
-        <div className="flex flex-col items-center gap-4 w-full max-w-md pb-4 overflow-x-hidden">
+        <div className="flex gap-4 max-w-xs flex-col items-center w-full pb-4 overflow-x-hidden mt-4">
+          <Portfolio/>
           <Top getProvider={setProvider} getMobile={setMobile} />
           <PlansListing
             data_array={data}

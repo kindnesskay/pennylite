@@ -18,8 +18,8 @@ export default function Top({
     getMobile(phone);
   }, [phone]);
   return (
-    <>
-      <div className="flex h-12 rounded-lg overflow-hidden mt-4 bg-white">
+    <div className="w-full">
+      <div className="flex h-12 mb-4 rounded-lg overflow-hidden bg-white shadow-lg w-full">
         <div className="w-20 text-gray-700  h-full p-2 flex justify-center items-center">
           <p className=" font-semibold cursor-pointer font-mono">
             {(provider && provider.name.toUpperCase()) || ""}
@@ -42,6 +42,6 @@ export default function Top({
         />
       </div>
       <Providers getNetworkProvider={setProvider} />
-    </>
+    </div>
   );
 }
